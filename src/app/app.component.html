@@ -1,0 +1,17 @@
+<div class="tc">
+  <h1>{{title}}</h1>
+  <div className="pa2">
+    <input
+      type="search"
+      class="pa3 ba b--green bg-lightest-blue"
+      placeholder="search robots"
+    />
+  </div>
+  <div class="scroll">
+    @for (robot of robots; track robot.id) {
+      <app-card [robot]="robot"></app-card>
+    }
+  </div>
+</div>
+
+<router-outlet></router-outlet>
