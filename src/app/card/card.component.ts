@@ -1,22 +1,42 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IRobot } from '../model/robot';
+import "tachyons";
+
 
 @Component({
-  selector: 'app-card',
+  selector: 'robot-card',
   standalone: true,
   imports: [],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
 export class CardComponent {
+  @Input({
+    required: true,
+  })
+  robot: IRobot;
 
   @Input({
     required: true,
-  }) 
-  robot: IRobot = {
-    id: 0,
-    name: 'Robot',
-    username: 'robot',
-    email: 'robot@email.com',
-  };
+  })
+  isEven: boolean = false;
+
+  constructor() {
+    this.robot = {
+      id: 0,
+      name: 'Robot',
+      username: 'robot',
+      email: 'robot@email.com',
+    };
+    
+  }
+
+
+  onRobotClicked() {
+    console.log('onRobotClicked', this.robot?.id);
+  }
+
+  applyEvenStyle() {
+    return "is-even"
+  }
 }
