@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IRobot } from '../model/robot';
 import "tachyons";
 
@@ -27,10 +27,10 @@ export class CardComponent {
       name: 'Robot',
       username: 'robot',
       email: 'robot@email.com',
+      iconUrl: ''
     };
     
   }
-
 
   onRobotClicked() {
     console.log('onRobotClicked', this.robot?.id);

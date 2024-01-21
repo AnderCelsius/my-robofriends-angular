@@ -30,6 +30,10 @@ export class AppComponent {
     console.log('onRobotClicked', robot);
   }
 
+  robotTrackBy(index: number, robot: IRobot): number {
+    return robot.id;
+  }
+
   onSearchChange(searchTerm: string): void {
     searchTerm = searchTerm.toLowerCase();
     this.filteredRobots = this.robots.filter(robot => 
