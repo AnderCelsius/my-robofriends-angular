@@ -18,13 +18,13 @@ export class AppComponent {
   title = 'my-first-project';
   robots: IRobot[] = [];
   filteredRobots: IRobot[] = [];
-
   searchTerm: string = '';
 
   constructor() {
     this.robots = ROBOTS;
     this.filteredRobots = this.robots;
   }
+
 
   onRobotClicked(robot: IRobot): void {
     console.log('onRobotClicked', robot);

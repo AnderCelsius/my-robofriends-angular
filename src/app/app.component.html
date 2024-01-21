@@ -10,11 +10,10 @@
     />
   </div>
   <div class="scroll">
-    <robot-card
-      *ngFor="let robot of filteredRobots; even as isEven; trackBy: robotTrackBy"
-      [robot]="robot"
-      [isEven]="isEven"
-    />
+    @for (robot of robots; track $index) {
+    <!-- Custom event -->
+    <robot-card [robot]="robot" [isEven]="$even"/>
+    }
   </div>
 </div>
 
