@@ -17,24 +17,15 @@ import { ROBOTS } from '../../robots.data';
 export class AppComponent {
   title = 'my-first-project';
   robots: IRobot[] = [];
-  filteredRobots: IRobot[] = [];
 
   searchTerm: string = '';
 
   constructor() {
     this.robots = ROBOTS;
-    this.filteredRobots = this.robots;
   }
 
   onRobotClicked(robot: IRobot): void {
     console.log('onRobotClicked', robot);
   }
 
-  onSearchChange(searchTerm: string): void {
-    searchTerm = searchTerm.toLowerCase();
-    this.filteredRobots = this.robots.filter(robot => 
-      robot.name.toLowerCase().includes(searchTerm) || 
-      robot.username.toLowerCase().includes(searchTerm)
-    );
-  }
 }

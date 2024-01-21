@@ -5,12 +5,10 @@
       type="search"
       class="pa3 ba b--green bg-lightest-blue"
       placeholder="search robots"
-      [(ngModel)]="searchTerm"
-      (ngModelChange)="onSearchChange(searchTerm)"
     />
   </div>
   <div class="scroll">
-      @for (robot of filteredRobots; track $index) {
+      @for (robot of robots; track $index) {
         <!-- Custom event -->
           <robot-card [robot]="robot" [isEven]="$even"/>
       }
