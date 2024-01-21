@@ -1,6 +1,7 @@
 import { IRobot } from './src/app/model/robot';
 
 export const ROBOTS: any = [
+  undefined,
   {
     id: 1,
     name: 'Leanne Graham',
