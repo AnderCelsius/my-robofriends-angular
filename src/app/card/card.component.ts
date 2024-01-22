@@ -1,12 +1,14 @@
 import { Component, Input } from '@angular/core';
 import { IRobot } from '../model/robot';
 import "tachyons";
+import {  NgIf } from '@angular/common';
 
+// Use NgClass when you want to dynamically add styles to template
 
 @Component({
   selector: 'robot-card',
   standalone: true,
-  imports: [],
+  imports: [NgIf],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
@@ -43,4 +45,9 @@ export class CardComponent {
   applyEvenStyle() {
     return "is-even"
   }
+
+  cardClasses() {
+
+  }
 }
+
