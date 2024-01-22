@@ -29,7 +29,8 @@ export class CardComponent {
       name: 'Robot',
       username: 'robot',
       email: 'robot@email.com',
-      iconUrl: ''
+      iconUrl: '',
+      set: 'set1'
     };
     
   }

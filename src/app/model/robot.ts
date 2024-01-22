@@ -4,4 +4,5 @@ export interface IRobot {
     username: string;
     email: string;
     iconUrl: string;
+    set: string;
   }
