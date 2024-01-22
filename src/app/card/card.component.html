@@ -1,18 +1,10 @@
-<article
-  class="mw5 center bg-light-green br3 pa3 pa4-ns mv3 ba b--black-10 {{
-    isEven && applyEvenStyle()
-  }}"
->
+<article class="mw5 center bg-light-green br3 pa3 pa4-ns mv3 ba b--black-10">
   <div class="tc">
-    @if(robot.iconUrl){
     <img
       src="{{ robot.iconUrl }}"
       class="br-100 h4 w4 dib ba b--red-05 pa2"
       title="Photo of a {{ robot.name }}"
     />
-    }@else {
-      <p>No image available</p>
-    }
     <h1 class="f3 mb2">{{ robot.name }}</h1>
     <h2 class="f5 fw4 gray mt0">{{ robot.email }}</h2>
   </div>
@@ -23,4 +15,11 @@
   >
     View Robot
   </button>
+
+  <!-- <button
+    class="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue"
+    (click)="onRobotViewed($event)"
+  >
+    View Robot
+  </button> -->
 </article>
