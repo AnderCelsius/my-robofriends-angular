@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { IRobot } from '../model/robot';
 import "tachyons";
-import {  NgIf, NgSwitch, NgSwitchCase } from '@angular/common';
+import {  NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { ROBOT_SETS, ROBOT_SETS_VALUE } from '../common/constants';
 
 // Use NgClass when you want to dynamically add styles to template
@@ -9,7 +9,7 @@ import { ROBOT_SETS, ROBOT_SETS_VALUE } from '../common/constants';
 @Component({
   selector: 'robot-card',
   standalone: true,
-  imports: [NgIf, NgSwitch, NgSwitchCase],
+  imports: [NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
