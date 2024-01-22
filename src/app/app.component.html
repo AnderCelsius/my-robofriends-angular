@@ -5,17 +5,24 @@
       type="search"
       class="pa3 ba b--green bg-lightest-blue"
       placeholder="search robots"
-      [(ngModel)]="searchTerm"
-      (ngModelChange)="onSearchChange(searchTerm)"
+      #robotSearch
     />
   </div>
-  <div class="scroll">
+  <div class="scroll" *ngIf="robots.length; else emptyTemplate">
     <robot-card
-      *ngFor="let robot of filteredRobots; even as isEven; trackBy: robotTrackBy"
+      *ngFor="let robot of robots; even as isEven; odd as isOdd; first as isFirst; trackBy: robotTrackBy;"
       [robot]="robot"
       [isEven]="isEven"
+      [isOdd]="isOdd"
+      [isFirst]="isFirst"
     />
   </div>
+  
+  <ng-template #emptyTemplate class="scroll">
+    <div class="scroll">
+      <p>No robots available!</p>
+    </div>
+  </ng-template>
 </div>
 
 <router-outlet></router-outlet>

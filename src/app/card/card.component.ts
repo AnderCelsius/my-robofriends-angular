@@ -21,6 +21,12 @@ export class CardComponent {
   })
   isEven: boolean = false;
 
+  @Input()
+  isOdd: boolean = false;
+
+  @Input()
+  isFirst: boolean = false;
+
   constructor() {
     this.robot = {
       id: 0,
@@ -38,5 +44,9 @@ export class CardComponent {
 
   applyEvenStyle() {
     return "is-even"
+  }
+
+  applyOddStyle() {
+    return "is-odd"
   }
 }

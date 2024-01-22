@@ -6,6 +6,10 @@
     background: lightgrey;
   }
 
+  .is-odd {
+    background: lightblue;
+  }
+
   .ba {
     border-style: solid;
     border-width: 1px;
