@@ -19,11 +19,12 @@
     <h2 class="f5 fw4 gray mt0">{{ robot.email }}</h2>
   </div>
 
-  <div class="robot-set">
-    <a class="f7 link dim ba ph1 pv1 mb1 dib black" href="#0">Robot Type</a>
-    @switch (robot.set) {
-
-    }
+  <div class="robot-set" [ngSwitch]="robot.set">
+    <a class="f7 link dim ba ph1 pv1 mb1 dib black" href="#0" *ngSwitchCase="robotSets.SET1">{{ROBOT_TYPE.REGULAR}}</a>
+    <a class="f7 link dim ba ph1 pv1 mb1 dib black" href="#0" *ngSwitchCase="robotSets.SET2">{{ROBOT_TYPE.MONSTER}}</a>
+    <a class="f7 link dim ba ph1 pv1 mb1 dib black" href="#0" *ngSwitchCase="robotSets.SET3">{{ROBOT_TYPE.DISEMBODIED}}</a>
+    <a class="f7 link dim ba ph1 pv1 mb1 dib black" href="#0" *ngSwitchCase="robotSets.SET4">{{ROBOT_TYPE.KITTEN}}</a>
+    <a class="f7 link dim ba ph1 pv1 mb1 dib black" href="#0" *ngSwitchCase="robotSets.SET5">{{ROBOT_TYPE.HUMAN}}</a>
   </div>
 
   <button
