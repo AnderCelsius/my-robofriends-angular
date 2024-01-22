@@ -19,6 +19,12 @@
     <h2 class="f5 fw4 gray mt0">{{ robot.email }}</h2>
   </div>
 
+  <div class="robot-set">
+    @switch (robot.set) {
+      
+    }
+  </div>
+
   <button
     class="f6 link dim ph3 pv2 mb2 dib white bg-dark-blue"
     (click)="onRobotClicked()"
