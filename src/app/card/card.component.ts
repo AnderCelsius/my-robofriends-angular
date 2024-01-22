@@ -32,6 +32,10 @@ export class CardComponent {
     
   }
 
+  isImageVisible(): string {
+    return this.robot && this.robot.iconUrl;
+  }
+
   onRobotClicked() {
     console.log('onRobotClicked', this.robot?.id);
   }
