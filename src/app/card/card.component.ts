@@ -21,6 +21,9 @@ export class CardComponent {
   })
   isEven: boolean = false;
 
+  @Input()
+  index: number = 0;
+
   constructor() {
     this.robot = {
       id: 0,

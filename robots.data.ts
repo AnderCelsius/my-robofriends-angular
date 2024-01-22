@@ -41,7 +41,7 @@ export const ROBOTS: any = [
     name: 'Mrs. Dennis Schulist',
     username: 'leopoldo_corkery',
     email: 'Karley_Dach@jasper.info',
-    iconUrl: 'https://robohash.org/leopoldo_corkery?size=200x200&set=set3',
+    // iconUrl: 'https://robohash.org/leopoldo_corkery?size=200x200&set=set3',
   },
   {
     id: 7,

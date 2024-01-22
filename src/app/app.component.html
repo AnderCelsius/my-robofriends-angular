@@ -1,6 +1,6 @@
 <div class="tc">
   <h1>RobotFriends</h1>
-  <div className="pa2">
+  <!-- <div className="pa2">
     <input
       type="search"
       class="pa3 ba b--green bg-lightest-blue"
@@ -10,10 +10,32 @@
     />
   </div>
   <div class="scroll">
-    @for (robot of robots; track $index) {
-    <!-- Custom event -->
-    <robot-card [robot]="robot" [isEven]="$even"/>
+    @for (robot of robots; track robotTrackBy; ) {
+      <robot-card [robot]="robot" [isEven]="$even"/>
     }
+  </div> -->
+
+  <input
+    type="search"
+    class="pa3 ba b--green bg-lightest-blue"
+    placeholder="add items"
+    (keyup.enter)="addItem($event)"
+  />
+
+  <button class="clear-btn" (click)="clearItems()">Clear List</button>
+
+  @if(validationError) {
+    <div class="error">{{ validationError }}</div>
+  }
+
+  <div class="pa3 pa5-ns">
+    <ul class="list pl0">
+      @for (item of items; track $index; ) {
+      <li>{{ item | titlecase }}</li>
+      }@empty{
+      <p>No items added</p>
+      }
+    </ul>
   </div>
 </div>
 

@@ -16,4 +16,11 @@
     border: 1px solid black;
     height: 800px;
   }
+
+  ul li {
+    color: white;
+  }
   
+  .error {
+    color: red;
+  }
